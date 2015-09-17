@@ -18,4 +18,16 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+    
+class person(models.Model):
+    shirt_size=(
+        ('S','Small'),
+        ('M','Medium'),
+        ('L','Large'),
+        )
+
+    name=models.CharField(max_length=200)
+    size=models.CharField(max_length=1, choices=shirt_size)
     
